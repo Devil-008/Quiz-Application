@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quizapp/widgets/questions.dart';
 
 import 'list.dart';
 import 'quiz.dart';
@@ -37,8 +38,9 @@ Widget quizOption(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       InkWell(
-        onTap: (){
-          Get.to(()=>QuizScreen());
+        onTap: () {
+          // Get.to(()=>QuizScreen());
+          Get.to(() => Questions());
         },
         child: Container(
           height: 135,
@@ -67,6 +69,7 @@ Widget quizOption(
               ),
               SizedBox(
                 width: 30,
+                
               ),
               Text(
                 title,
